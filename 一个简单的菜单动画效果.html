@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .menu-container{
+            width: 500px;
+            margin:100px auto;
+            overflow: hidden;
+        }
+        .name{
+            display: block;
+            width: 100px;
+            height: 40px;
+            font-size:20px;
+            text-align: center;
+            line-height:40px;
+            margin-bottom: 40px;
+            margin-left: 200px;
+            transition: width .3s;
+            -webkit-transition: width .3s;
+        }
+        .active{
+            color:#0000ff;
+        }
+        .line{
+            display: block;
+            width: 0;
+            height: 4px;
+            background-color: #0000ff;
+            margin:0 auto 40px;
+            transition: width .3s;
+            -webkit-transition: width .3s;
+        }
+        .trans{
+            width: 100px;
+        }
+        .btn{
+            width: 100px;
+            height: 40px;
+            box-sizing: border-box;
+            font-size:20px;
+            color:#000;
+            border:1px solid #666;
+            border-radius: 10px;
+            background-color: #fff;
+            margin-left: 200px;
+            outline: none;
+        }
+
+    </style>
+    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+</head>
+<body>
+<div class="menu-container">
+    <span class="name">前端学院</span>
+    <span class="line"></span>
+    <button type="button" class="btn">切换样式</button>
+</div>
+<script>
+    $('.btn').click(function () {
+        $('.line').toggleClass('trans');
+        $('.name').toggleClass('active');
+    })
+</script>
+</body>
+</html>
