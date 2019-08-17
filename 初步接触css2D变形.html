@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .transform-box{
+            width: 800px;
+            height: 200px;
+            margin: 100px auto;
+            border:1px solid #eee;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+        .box{
+            width: 60px;
+            height: 60px;
+            border:1px solid #eee;
+            background-color: #999;
+            text-align: center;
+            line-height: 60px;
+        }
+        .box:nth-child(2){
+            transform: skewX(30deg);
+        }
+        .box:nth-child(3){
+            transform: scaleX(0.5)
+        }
+        .box:nth-child(4){
+            transform: rotate(45deg)
+        }
+        .box:nth-child(5){
+            transform: translate(10px,20px);
+        }
+        .box:nth-child(6){
+            transform: skewX(30deg) translate(10px,20px) scaleX(0.5) rotate(45deg);
+        }
+    </style>
+</head>
+<body>
+<div class="transform-box">
+    <div class="box">box0</div>
+    <div class="box">box1</div>
+    <div class="box">box2</div>
+    <div class="box">box3</div>
+    <div class="box">box4</div>
+    <div class="box">box5</div>
+</div>
+</body>
+</html>
